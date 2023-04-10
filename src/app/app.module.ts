@@ -1,0 +1,39 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { RoutingModule } from './app/routing.module';
+import { NaoEncontradaComponent } from './nao-encontrada/nao-encontrada.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from "@angular/material/snack-bar"
+
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { BarraPesquisaComponent } from './barra-pesquisa/barra-pesquisa.component';
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NaoEncontradaComponent,
+    BarraPesquisaComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RoutingModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
+    FormsModule
+  ],
+  providers: [
+    provideNgxMask()
+  ],
+})
+export class AppModule { }
